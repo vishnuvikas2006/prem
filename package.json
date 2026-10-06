@@ -1,0 +1,32 @@
+{
+  "name": "data-science-laboratory-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "tsx scripts/convert-docs.ts",
+    "dev": "vite",
+    "prebuild": "tsx scripts/convert-docs.ts",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dompurify": "^3.2.6",
+    "highlight.js": "^11.11.1",
+    "lucide-react": "^0.468.0",
+    "mammoth": "^1.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.1"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.0.5",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.19.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.5"
+  }
+}
