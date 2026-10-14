@@ -150,10 +150,10 @@ export const ASSETS = {
 Use the following exact student information:
 
 Name:
-R.Prem Kumar
+G.Charan Teja
 
 Roll Number:
-24102A030106
+24102A03071
 
 Section:
 DS-2
@@ -174,7 +174,7 @@ The hero page should display:
 
 STUDENT PORTFOLIO
 
-R.Prem Kumar
+G.Charan Teja
 
 Data | Analysis | Insights | Impact
 

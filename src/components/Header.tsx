@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
-import { ASSETS } from "../config/upload";
 
 const links = [
   { label: "Home", to: "/", end: true },
@@ -16,23 +15,12 @@ export function Header() {
 
   const isLinkActive = (to: string, end: boolean) => {
     if (end) return location.pathname === "/";
-    return to === "/experiments"
-      ? location.pathname.startsWith(to)
-      : location.pathname === to;
+    return location.pathname.startsWith(to);
   };
 
   return (
     <header className="site-header">
       <div className="header-inner">
-        <NavLink
-          className="brand-mark"
-          to="/"
-          aria-label="MBU Data Science Laboratory home"
-          onClick={() => setMenuOpen(false)}
-        >
-          <img src={ASSETS.mbuLogo} alt="Mohan Babu University" />
-        </NavLink>
-
         <div className="header-title">
           <span>Data Science Laboratory</span>
           <small>Subject Code: 22DS102006</small>

@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { PageShell } from "./components/PageShell";
-import { ExperimentPage } from "./pages/ExperimentPage";
+import { ExperimentWorkspace } from "./pages/ExperimentWorkspace";
 import { Experiments } from "./pages/Experiments";
 import { Home } from "./pages/Home";
 import { Modules } from "./pages/Modules";
@@ -14,10 +14,12 @@ function RoutedPages() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/modules" element={<Modules />} />
+        <Route path="/modules/:moduleId" element={<Modules />} />
         <Route path="/experiments" element={<Experiments />} />
-        <Route path="/experiments/4" element={<ExperimentPage experimentId={4} />} />
-        <Route path="/experiments/5" element={<ExperimentPage experimentId={5} />} />
+        <Route path="/experiments/:expId" element={<ExperimentWorkspace />} />
+        <Route path="/experiments/:expId/:subId" element={<ExperimentWorkspace />} />
         <Route path="/tools" element={<Tools />} />
+        <Route path="/tools/:toolId" element={<Tools />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </PageShell>
@@ -26,8 +28,8 @@ function RoutedPages() {
 
 export default function App() {
   return (
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <RoutedPages />
-    </BrowserRouter>
+    </HashRouter>
   );
 }

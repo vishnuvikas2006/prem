@@ -21,18 +21,6 @@ export function Home() {
             </p>
             <h1>R.Prem Kumar</h1>
             <p className="hero__motto">Data <i /> Analysis <i /> Insights <i /> Impact</p>
-            <dl className="student-details">
-              {studentDetails.map((detail) => {
-                const Icon = detail.icon;
-                return (
-                  <div className="student-detail" key={detail.label}>
-                    <Icon size={17} aria-hidden="true" />
-                    <dt>{detail.label}</dt>
-                    <dd>{detail.value}</dd>
-                  </div>
-                );
-              })}
-            </dl>
           </div>
           <aside className="student-card" aria-label="Student profile">
             <div className="student-card__photo-wrap">
@@ -46,6 +34,18 @@ export function Home() {
               />
             </div>
             <p>R.Prem Kumar</p>
+            <dl className="student-details">
+              {studentDetails.map((detail) => {
+                const Icon = detail.icon;
+                return (
+                  <div className="student-detail" key={detail.label}>
+                    <Icon size={15} aria-hidden="true" />
+                    <dt>{detail.label}</dt>
+                    <dd>{detail.value}</dd>
+                  </div>
+                );
+              })}
+            </dl>
             <span className="student-card__signature" aria-hidden="true" />
           </aside>
         </div>
